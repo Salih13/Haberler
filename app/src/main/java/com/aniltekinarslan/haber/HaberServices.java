@@ -4,6 +4,7 @@ import com.aniltekinarslan.haber.Models.AnaSayfaHaberler;
 import com.aniltekinarslan.haber.Models.AnasayfaSliderResponse;
 import com.aniltekinarslan.haber.Models.HaberDetayResponse;
 import com.aniltekinarslan.haber.Models.HaberlerResponse;
+import com.aniltekinarslan.haber.Models.KategorilerResponse;
 
 import java.util.List;
 
@@ -25,11 +26,9 @@ public interface HaberServices {
     @GET("api/News")
     Call<List<AnaSayfaHaberler>> getAnaSayfaHaberler();
 
+    @GET("api/Category")
+    Call<List<KategorilerResponse>> getKategoriler();
 
-
-
-    @FormUrlEncoded
-    @POST("/admin/api/json.php")
-    Call<List<HaberlerResponse>> posthaberler(@Field("kategori_id") Integer kategori_id);
-
+    @GET("api/News")
+    Call<List<HaberlerResponse>> getHaberler(@Query("category_title") String kategoriBasligi);
 }

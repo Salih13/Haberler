@@ -125,6 +125,8 @@ public class AnaSayfaFragment extends android.app.Fragment {
 
         lvAnaSayfaHaberler = (ListView) view.findViewById(R.id.lvAnaSayfaHaberler);
 
+        getAnasayfaSlider(1);
+
         getAnaSayfaHaberler();
 
         return view;
@@ -198,6 +200,6 @@ public class AnaSayfaFragment extends android.app.Fragment {
     public void onResume() {
         super.onResume();
         //Başlık Güncelleme
-        getActivity().setTitle("Ana Sayfa");
+        getActivity().setTitle("Haberler");
     }
 }

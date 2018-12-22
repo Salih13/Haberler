@@ -1,5 +1,7 @@
 package com.aniltekinarslan.haber.Adapters;
 
+import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.aniltekinarslan.haber.Fragments.HaberDetayFragment;
 import com.aniltekinarslan.haber.Models.HaberlerResponse;
 import com.aniltekinarslan.haber.R;
 import com.squareup.picasso.Callback;
@@ -74,8 +77,13 @@ public class HaberListesiListViewAdapter extends BaseAdapter {
         llHaberListesiLvItems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                DetayFragment.haberId = Integer.parseInt(haberlerList.get(position).getId());
-//                Constant.openFragment(new DetayFragment(), "detayFragment", context);
+                HaberDetayFragment haberDetayFragment = new HaberDetayFragment();
+                HaberDetayFragment.haberId = Integer.parseInt(haberlerList.get(position).getId());
+                if (haberDetayFragment != null) {
+                    FragmentTransaction ft =  ((Activity) context).getFragmentManager().beginTransaction();
+                    ft.replace(R.id.llMainActivityFragmentsGroup, haberDetayFragment).addToBackStack("detayFragment");
+                    ft.commit();
+                }
             }
         });
 

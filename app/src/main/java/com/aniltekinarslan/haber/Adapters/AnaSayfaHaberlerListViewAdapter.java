@@ -68,10 +68,12 @@ public class AnaSayfaHaberlerListViewAdapter extends BaseAdapter {
         });
 
         TextView tvHaberBaslik = (TextView) convertView.findViewById(R.id.tvAnaSayfaHaberlerLvItemBaslik);
+        TextView tvHaberKategori = (TextView) convertView.findViewById(R.id.tvAnaSayfaHaberlerLvItemKategori);
         TextView tvHaberTarih = (TextView) convertView.findViewById(R.id.tvAnaSayfaHaberlerLvItemTarih);
         ImageView imgHaber = (ImageView) convertView.findViewById(R.id.imgAnaSayfaHaberlerLvResim);
 
         tvHaberBaslik.setText(haberlerList.get(position).getBaslik().toString());
+        tvHaberKategori.setText(haberlerList.get(position).getKategori().toString());
         tvHaberTarih.setText(haberlerList.get(position).getYayinTarihi().toString());
 
         final ProgressBar pbMainHaberLvHaber = (ProgressBar) convertView.findViewById(R.id.pbAnaSayfaHaberler);

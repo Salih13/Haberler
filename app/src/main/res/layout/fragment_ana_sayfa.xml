@@ -25,7 +25,6 @@
                 android:id="@+id/llSonHaberler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:orientation="vertical"
                 android:visibility="visible">
 
@@ -248,16 +247,10 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <ListView
+                android:id="@+id/lvAnaSayfaHaberler"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ListView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/lvAnaSayfaHaberler"></ListView>
-            </LinearLayout>
+                android:layout_height="200dp"></ListView>
 
         </LinearLayout>
 

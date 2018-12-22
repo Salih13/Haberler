@@ -29,6 +29,7 @@ public class HaberlerFragment extends android.app.Fragment {
     CoordinatorLayout clHaberlerFragment;
     ListView lvHaberlerFragment;
     public static int kategoriId;
+    public static String kategoriBasligi;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,14 +40,14 @@ public class HaberlerFragment extends android.app.Fragment {
         lvHaberlerFragment = (ListView) view.findViewById(R.id.lvHaberlerFragment);
         lvHaberlerFragment.setDividerHeight(8);
 
-        getHaberler(kategoriId);
+        getHaberler();
 
         return view;
     }
 
-    private void getHaberler(int kategoriId) {
+    private void getHaberler() {
         final ProgressDialog progressDialog = DialogsUtils.showProgressDialog(context);
-        Call<List<HaberlerResponse>> call = Definactions.getClient().posthaberler(kategoriId);
+        Call<List<HaberlerResponse>> call = Definactions.getClient().getHaberler(kategoriBasligi);
         call.enqueue(new Callback<List<HaberlerResponse>>() {
             @Override
             public void onResponse(Call<List<HaberlerResponse>> call, Response<List<HaberlerResponse>> response) {
@@ -83,6 +84,6 @@ public class HaberlerFragment extends android.app.Fragment {
     public void onResume() {
         super.onResume();
         //Başlık Güncelleme
-        getActivity().setTitle("Haberler");
+        getActivity().setTitle(kategoriBasligi);
     }
 }

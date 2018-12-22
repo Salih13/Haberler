@@ -36,6 +36,15 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvAnaSayfaHaberlerLvItemKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="@dimen/textview_text_size"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/tvAnaSayfaHaberlerLvItemBaslik"
             android:layout_width="match_parent"
             android:layout_height="53dp"
