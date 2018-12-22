@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="green">#3bbc45</color>
+    <color name="red">#e33143</color>
+    <color name="black">#000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#aaa</color>
+
+    <color name="sonDakika">#FFCD28</color>
+    <color name="spor">#7EA6E0</color>
+    <color name="ekonomi">#EA6B66</color>
+    <color name="finans">#FFA500</color>
+    <color name="magazin">#97D077</color>
+</resources>
