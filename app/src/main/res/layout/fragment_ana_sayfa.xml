@@ -18,7 +18,7 @@
         <LinearLayout
             android:id="@+id/llAna"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
@@ -29,132 +29,20 @@
                 android:orientation="vertical"
                 android:visibility="visible">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:orientation="horizontal"
-                    android:weightSum="5">
-
-                    <Button
-                        android:id="@+id/btnSonDakika"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/sonDakika"
-                        android:text="Son Dakika"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="9sp" />
-
-                    <Button
-                        android:id="@+id/btnSpor"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/spor"
-                        android:text="Spor"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="9sp" />
-
-                    <Button
-                        android:id="@+id/btnEkonomi"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/ekonomi"
-                        android:text="Ekonomi"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="9sp" />
-
-                    <Button
-                        android:id="@+id/btnFinans"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/finans"
-                        android:text="Finans"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="9sp" />
-
-                    <Button
-                        android:id="@+id/btnMagazin"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/magazin"
-                        android:text="Magazin"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="9sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:weightSum="5">
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/down"
-                        android:visibility="visible" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:fitsSystemWindows="false"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/down"
-                        android:visibility="visible" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/down"
-                        android:visibility="visible" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/down"
-                        android:visibility="visible" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/down"
-                        android:visibility="visible" />
-
-                </LinearLayout>
-
                 <RelativeLayout
                     android:id="@+id/llSonBildirimlerSlider"
                     android:layout_width="match_parent"
                     android:layout_height="180dp">
 
                     <android.support.v4.view.ViewPager
-                        android:id="@+id/vpSonBildirimler"
+                        android:id="@+id/vpSonHaberler"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:weightSum="5">
 
                         <LinearLayout
@@ -245,6 +133,130 @@
 
                 </RelativeLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/down"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:fitsSystemWindows="false"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/down"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/down"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/down"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/down"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <Button
+                        android:id="@+id/btnSonDakika"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/sonDakika"
+                        android:text="Son Dakika"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnSpor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/spor"
+                        android:text="Spor"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnEkonomi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/ekonomi"
+                        android:text="Ekonomi"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnFinans"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/finans"
+                        android:text="Finans"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnMagazin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/magazin"
+                        android:text="Magazin"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lvAnaSayfaHaberler"></ListView>
             </LinearLayout>
 
         </LinearLayout>
